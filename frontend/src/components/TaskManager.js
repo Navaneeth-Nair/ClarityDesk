@@ -81,7 +81,7 @@ const TaskManager = ({ tasks, user, activeUsers, onTaskCreate, onTaskUpdate, onT
   const completedTasks = tasks.filter(task => task.completed);
 
   return (
-    <div className="card">
+    <div className="card card-large">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
         <h2>📋 Task Manager</h2>
         <button 

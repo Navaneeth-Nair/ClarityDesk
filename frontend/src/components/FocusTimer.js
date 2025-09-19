@@ -127,7 +127,7 @@ const FocusTimer = ({ onSessionStart, onSessionComplete }) => {
   };
 
   return (
-    <div className="card">
+    <div className="card card-medium">
       <h2>⏰ Focus Timer</h2>
       
       <div className="timer-container">

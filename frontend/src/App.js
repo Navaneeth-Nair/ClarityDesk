@@ -10,6 +10,9 @@ import CollaborationPanel from './components/CollaborationPanel';
 import UserLogin from './components/UserLogin';
 import Header from './components/Header';
 
+// Context
+import { ThemeProvider } from './contexts/ThemeContext';
+
 // Utils
 import { notifyUser } from './utils/notifications';
 
@@ -169,59 +172,65 @@ function App() {
   }
 
   if (!user) {
-    return <UserLogin onLogin={handleUserLogin} />;
+    return (
+      <ThemeProvider>
+        <UserLogin onLogin={handleUserLogin} />
+      </ThemeProvider>
+    );
   }
 
   return (
-    <div className="App">
-      <Header 
-        user={user} 
-        activeUsers={activeUsers} 
-        onLogout={handleUserLogout}
-      />
-      
-      <main className="main-content">
-        <div className="dashboard-grid">
-          {/* Left Column - Task Management */}
-          <div className="left-column">
-            <TaskManager
-              tasks={tasks}
-              user={user}
-              activeUsers={activeUsers}
-              onTaskCreate={handleTaskCreate}
-              onTaskUpdate={handleTaskUpdate}
-              onTaskDelete={handleTaskDelete}
-            />
-          </div>
+    <ThemeProvider>
+      <div className="App">
+        <Header 
+          user={user} 
+          activeUsers={activeUsers} 
+          onLogout={handleUserLogout}
+        />
+        
+        <main className="main-content">
+          <div className="dashboard-grid">
+            {/* Left Column - Task Management */}
+            <div className="left-column">
+              <TaskManager
+                tasks={tasks}
+                user={user}
+                activeUsers={activeUsers}
+                onTaskCreate={handleTaskCreate}
+                onTaskUpdate={handleTaskUpdate}
+                onTaskDelete={handleTaskDelete}
+              />
+            </div>
 
-          {/* Center Column - Stats and Timer */}
-          <div className="center-column">
-            <ProductivityStats 
-              stats={stats} 
-              userId={user.id}
-              onStatsUpdate={fetchStats}
-            />
-            <FocusTimer
-              onSessionStart={handleFocusSessionStart}
-              onSessionComplete={handleFocusSessionComplete}
-            />
-          </div>
+            {/* Center Column - Stats and Timer */}
+            <div className="center-column">
+              <ProductivityStats 
+                stats={stats} 
+                userId={user.id}
+                onStatsUpdate={fetchStats}
+              />
+              <FocusTimer
+                onSessionStart={handleFocusSessionStart}
+                onSessionComplete={handleFocusSessionComplete}
+              />
+            </div>
 
-          {/* Right Column - Collaboration */}
-          <div className="right-column">
-            <CollaborationPanel
-              messages={collaborationMessages}
-              activeUsers={activeUsers}
-              currentUser={user}
-              onSendMessage={handleCollaborationMessage}
-            />
+            {/* Right Column - Collaboration */}
+            <div className="right-column">
+              <CollaborationPanel
+                messages={collaborationMessages}
+                activeUsers={activeUsers}
+                currentUser={user}
+                onSendMessage={handleCollaborationMessage}
+              />
+            </div>
           </div>
-        </div>
-      </main>
+        </main>
 
-      {/* Notification container */}
-      <div id="notification-container"></div>
-    </div>
+        {/* Notification container */}
+        <div id="notification-container"></div>
+      </div>
+    </ThemeProvider>
   );
 }
 

@@ -44,7 +44,7 @@ const CollaborationPanel = ({ messages, activeUsers, currentUser, onSendMessage 
   };
 
   return (
-    <div className="card">
+    <div className="card card-large">
       <h2>💬 Team Chat</h2>
       
       {/* Active Users */}

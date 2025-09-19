@@ -91,7 +91,7 @@ const ProductivityStats = ({ stats, userId, onStatsUpdate }) => {
   const trend = getProductivityTrend();
 
   return (
-    <div className="card">
+    <div className="card card-medium">
       <h2>📊 Productivity Insights</h2>
       
       <div className="stats-grid">
