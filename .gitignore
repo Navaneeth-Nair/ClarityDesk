@@ -1,0 +1,240 @@
+# ===== SENSITIVE FILES & ENVIRONMENT VARIABLES =====
+# Environment files (contains API keys, database credentials, OAuth secrets)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.env.staging
+
+# Database credentials and connection strings
+database.json
+db.json
+.database
+credentials.json
+service-account.json
+
+# OAuth and API credentials
+client_secret*.json
+google-credentials.json
+oauth-config.json
+
+# ===== NODE.JS DEPENDENCIES =====
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Microbundle cache
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Storybook build outputs
+.out
+.storybook-out
+
+# Temporary folders
+tmp/
+temp/
+
+# ===== REACT BUILD OUTPUT =====
+# Production build
+build/
+dist/
+
+# React development
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ===== DATABASE FILES =====
+# SQLite databases
+*.sqlite
+*.sqlite3
+*.db
+
+# MySQL dumps
+*.sql
+
+# Database backups
+backup/
+*.backup
+
+# ===== LOGS =====
+# Log files
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+server.log
+error.log
+access.log
+
+# ===== DEVELOPMENT TOOLS =====
+# VSCode settings (keep workspace settings private)
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== OPERATING SYSTEM FILES =====
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.nfs*
+
+# ===== DEPLOYMENT & CI/CD =====
+# Docker
+.dockerignore
+
+# Deployment keys
+*.pem
+*.key
+*.crt
+*.p12
+
+# CI/CD secrets
+.github/workflows/secrets/
+.github/secrets/
+
+# ===== GITHUB & CI/CD =====
+# GitHub Copilot instructions (workspace-specific, keep local)
+.github/copilot-instructions.md
+
+# GitHub Actions secrets and sensitive workflows
+.github/workflows/*secrets*
+.github/workflows/*deploy*
+.github/workflows/*production*
+.github/secrets/
+
+# GitHub personal access tokens and credentials
+.github/tokens/
+.github/credentials/
+
+# Local GitHub CLI config (may contain tokens)
+.github/gh-config/
+
+# ===== APPLICATION SPECIFIC =====
+# Session storage
+sessions/
+
+# File uploads
+uploads/
+public/uploads/
+
+# Cache files
+.cache/
+cache/
+
+# Temporary test files
+test-results/
+screenshots/
+
+# ===== SECURITY TOKENS =====
+# JWT secrets
+jwt-secret.txt
+auth-tokens.json
+
+# SSL certificates
+ssl/
+certificates/
+
+# ===== BACKUP FILES =====
+# Backup files
+*.bak
+*.backup
+*.orig
+
+# Archive files (potentially containing sensitive data)
+*.zip
+*.tar.gz
+*.tar
+*.rar
+

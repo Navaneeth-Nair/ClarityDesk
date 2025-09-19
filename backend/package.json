@@ -1,0 +1,36 @@
+{
+  "name": "productivity-dashboard-backend",
+  "version": "1.0.0",
+  "description": "Backend for Smart Productivity Dashboard",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "init-db": "node src/utils/initDatabase.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.2",
+    "googleapis": "^160.0.0",
+    "mysql2": "^3.15.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "socket.io": "^4.7.2",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "productivity",
+    "dashboard",
+    "remote",
+    "collaboration"
+  ],
+  "author": "CodeFest 2025 Team",
+  "license": "MIT"
+}
