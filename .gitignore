@@ -224,7 +224,7 @@ auth-tokens.json
 
 # SSL certificates
 ssl/
-certificates/
+i want tiocertificates/
 
 # ===== BACKUP FILES =====
 # Backup files
@@ -237,4 +237,10 @@ certificates/
 *.tar.gz
 *.tar
 *.rar
+
+# ===== DEPLOYMENT SCRIPTS =====
+# Local deployment scripts
+deploy.ps1
+deploy.sh
+deploy.bat
 
