@@ -18,7 +18,7 @@ import { ThemeProvider } from './contexts/ThemeContext';
 // Utils
 import { notifyUser } from './utils/notifications';
 
-const socket = io('http://localhost:5000');
+const socket = process.env.REACT_APP_SOCKET_URL ? io(process.env.REACT_APP_SOCKET_URL) : null;
 
 function App() {
   const [user, setUser] = useState(null);
@@ -28,10 +28,35 @@ function App() {
   const [stats, setStats] = useState({});
   const [loading, setLoading] = useState(true);
 
+  // Demo mode detection
+  const isDemoMode = process.env.REACT_APP_DEMO_MODE === 'true' || !process.env.REACT_APP_API_URL;
+
   // Check for existing authentication on app load
   useEffect(() => {
     const checkAuthStatus = async () => {
       try {
+        // In demo mode, set a demo user and skip API calls
+        if (isDemoMode) {
+          setUser({
+            id: 1,
+            name: 'Demo User',
+            email: 'demo@claritydesk.com'
+          });
+          setTasks([
+            { id: 1, title: 'Complete project documentation', description: 'Write comprehensive docs', priority: 'high', status: 'pending', dueDate: '2025-09-25' },
+            { id: 2, title: 'Review team feedback', description: 'Analyze team suggestions', priority: 'medium', status: 'in-progress', dueDate: '2025-09-24' },
+            { id: 3, title: 'Prepare presentation', description: 'Create slides for demo', priority: 'high', status: 'completed', dueDate: '2025-09-23' }
+          ]);
+          setStats({
+            totalTasks: 3,
+            completedTasks: 1,
+            pendingTasks: 2,
+            productivityScore: 85
+          });
+          setLoading(false);
+          return;
+        }
+
         // First check localStorage for user data
         const storedUser = localStorage.getItem('user');
         if (storedUser) {

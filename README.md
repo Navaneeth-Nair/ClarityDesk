@@ -27,6 +27,44 @@ A lightweight, demo-ready productivity dashboard designed for remote students, f
 - npm or yarn
 
 ### Quick Demo Setup
+1. Install dependencies for all projects:
+```bash
+npm run install:all
+```
+
+2. Set up environment variables (see SETUP.md)
+
+3. Start both frontend and backend:
+```bash
+npm start
+```
+
+4. For development with auto-reload:
+```bash
+npm run start:dev
+```
+
+### Individual Services
+```bash
+# Frontend only (React dev server)
+npm run start:frontend
+
+# Backend only (Express server)
+npm run start:backend
+```
+
+### Deployment
+```bash
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+📖 **[See DEV_SCRIPTS.md for all available scripts](./DEV_SCRIPTS.md)**
+
+### Legacy Quick Setup
 1. Install XAMPP and start MySQL
 2. Run backend: `cd backend && npm start`
 3. Run frontend: `cd frontend && npm start`

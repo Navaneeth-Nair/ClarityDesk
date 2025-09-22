@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/Code-fest-2025-Hackathon/static/css/main.6a70d686.css",
-    "main.js": "/Code-fest-2025-Hackathon/static/js/main.92025c94.js",
+    "main.js": "/Code-fest-2025-Hackathon/static/js/main.3ceaa485.js",
     "index.html": "/Code-fest-2025-Hackathon/index.html"
   },
   "entrypoints": [
     "static/css/main.6a70d686.css",
-    "static/js/main.92025c94.js"
+    "static/js/main.3ceaa485.js"
   ]
 }
