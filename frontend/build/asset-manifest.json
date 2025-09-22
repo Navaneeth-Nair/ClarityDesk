@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/Code-fest-2025-Hackathon/static/css/main.6a70d686.css",
-    "main.js": "/Code-fest-2025-Hackathon/static/js/main.3ceaa485.js",
-    "index.html": "/Code-fest-2025-Hackathon/index.html"
+    "main.css": "/ClarityDesk/static/css/main.6a70d686.css",
+    "main.js": "/ClarityDesk/static/js/main.03d68f83.js",
+    "index.html": "/ClarityDesk/index.html"
   },
   "entrypoints": [
     "static/css/main.6a70d686.css",
-    "static/js/main.3ceaa485.js"
+    "static/js/main.03d68f83.js"
   ]
 }
