@@ -2,7 +2,7 @@
   "name": "clarity-desk",
   "version": "1.0.0",
   "description": "Smart Productivity Dashboard with Google Meet Integration",
-  "homepage": "https://navaneeth-nair.github.io/Code-fest-2025-Hackathon",
+  "homepage": "https://navaneeth-nair.github.io/ClarityDesk",
   "scripts": {
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
     "start:frontend": "cd frontend && npm start",
@@ -13,6 +13,7 @@
     "build:frontend": "cd frontend && npm run build",
     "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install",
     "deploy": "cd frontend && npm run build && npx gh-pages -d build",
+    "deploy:vercel": "vercel --prod",
     "predeploy": "npm run build",
     "test": "cd frontend && npm test",
     "clean": "rimraf frontend/build frontend/node_modules backend/node_modules node_modules"
